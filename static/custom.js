@@ -58,7 +58,8 @@ $(document).ready(function() {
 
     $("#remove-btn").on("click", function(event) {
         event.preventDefault();
-
+        alert("This button is currently disabled, contact owner if really needed.")
+        /*
         $.ajax({
             url: window.location.pathname,
             type: 'DELETE',
@@ -70,6 +71,7 @@ $(document).ready(function() {
                 window.location.href = encodeURI(uri);
             }
         });
+        */
     });
 
     $("#copy-btn").on("click", function(event) {
