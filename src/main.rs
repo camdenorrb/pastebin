@@ -370,10 +370,12 @@ fn create(
     Ok(url)
 }
 
+/*
 #[delete("/<id>")]
 fn remove(id: String, state: State<DB>) -> Result<(), rocksdb::Error> {
     state.delete(id)
 }
+*/
 
 #[get("/<id>?<lang>")]
 fn get<'r>(
