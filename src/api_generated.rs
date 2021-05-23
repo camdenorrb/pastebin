@@ -157,12 +157,12 @@ impl<'a: 'b, 'b> EntryBuilder<'a, 'b> {
 
 #[inline]
 pub fn get_root_as_entry<'a>(buf: &'a [u8]) -> Entry<'a> {
-  flatbuffers::get_root::<Entry<'a>>(buf)
+    unsafe { flatbuffers::root_unchecked::<Entry<'a>>(buf) }
 }
 
 #[inline]
 pub fn get_size_prefixed_root_as_entry<'a>(buf: &'a [u8]) -> Entry<'a> {
-  flatbuffers::get_size_prefixed_root::<Entry<'a>>(buf)
+    unsafe { flatbuffers::size_prefixed_root_unchecked::<Entry<'a>>(buf) }
 }
 
 #[inline]
