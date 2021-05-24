@@ -726,7 +726,7 @@ fn rocket(pastebin_config: PastebinConfig) -> rocket::Rocket {
             } else {
                 uri_prefix.as_str()
             },
-            routes![index, create, remove, get, get_new, get_raw, get_binary, get_static],
+            routes![index, create/*, remove*/, get, get_new, get_raw, get_binary, get_static],
         )
 }
 
